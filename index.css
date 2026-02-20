@@ -1,198 +1,261 @@
 * {
-    font-family: "Arimo", sans-serif;
-}
-
-body {
-    padding: 0;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-a {
-    text-decoration: none;
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+    background-color: #E8E1D6;
+    color: #071E2E;
 }
 
-.nav-items {
+.login-container {
     display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-    padding: 0 20px;
-    background-color: white;
-    border-radius: 10px;
+    min-height: 100vh;
+    width: 100%;
 }
 
-.nav-items h1 {
-    color: #1e3a8a;
-}
-
-.right-navbar {
+/* Left side - Image section */
+.image-section {
+    flex: 1;
+    background-image: url(./Assets/CargoSync_Login_Signup.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
     display: flex;
-    justify-content: right;
-    align-items: baseline;
-    gap: 20px;
-    font-size: large;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #E8E1D6;
+    padding: 40px;
+    text-align: center;
 }
 
-.right-navbar button {
-    padding: 10px;
+.image-section .logo {
     width: 100px;
-    background-color: #f97316;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    box-shadow: 0 4px 20px;
-    transition: transform 0.3s ease;
+    height: 100px;
+    margin-bottom: 30px;
+    opacity: 0.95;
 }
 
-.right-navbar button:hover {
-    transform: translateY(-5px);
-    cursor: pointer;
-}
-
-.hero-section {
-    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
-    color: white;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    height: 500px;
-}
-
-.hero-section img {
-    width: 10%;
-    border-radius: 10px;
-}
-
-.hero-section button {
-    padding: 10px;
-    width: 15%;
-    background-color: #f97316;
-    color: white;
-    border-radius: 10px;
-    border: none;
-    margin-top: 18px;
-    transition: transform 0.3s ease;
-}
-
-.hero-section button:hover {
-    transform: translateY(-5px);
-    cursor: pointer;
-}
-
-.how-it-works {
-    padding: 80px 0;
-}
-
-.how-it-works h1 {
-    color: #1e3a8a;
-    margin-top: 40px;
-    text-align: center;
-}
-
-.steps {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 3rem;
-}
-
-.step {
-    text-align: center;
-    padding: 2rem;
-    background-color: white;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-    border: 1px black solid;
-    margin-left: 20px;
-    margin-right: 20px;
-}
-
-.step:hover {
-    transform: translateY(-10px);
-}
-
-.step i {
-    width: 80px;
-    height: 80px;
-    background: #f97316;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 1.5rem;
-    font-size: 2rem;
-}
-
-.release {
-    text-align: center;
-}
-
-.release h1 {
-    color: #1e3a8a;
+.image-section h1 {
     font-size: 2.5rem;
+    margin-bottom: 15px;
+    font-weight: 700;
 }
 
-.release button {
-    font-size: large;
-    padding: 8px 30px;
-    background-color: #f97316;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    transition: transform 0.3s ease;
+.image-section p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    max-width: 300px;
 }
 
-.release button:hover {
-    transform: translateY(-5px);
-    cursor: pointer;
+/* Right side - Form section */
+.form-section {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 40px;
+    background-color: #E8E1D6;
+    overflow-y: auto;
 }
 
-.final-cta {
-    background: #F0EAD6;
-    margin: 30px 150px;
-    text-align: center;
-    padding: 8px 0;
-    font-size: 15px;
-    border-radius: 10px;
-    padding-bottom: 20px;
+.form-wrapper {
+    width: 100%;
+    max-width: 400px;
 }
 
-.final-cta input {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 15px;
-    padding-right: 10px;
-    border: 1px grey solid;
-    border-radius: 8px;
-    margin-right: 20px;
-    width: 300px;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+.form-wrapper h2 {
+    font-size: 2rem;
+    margin-bottom: 8px;
+    font-weight: 700;
+    color: #071E2E;
 }
 
-.final-cta input:focus {
+.form-wrapper .subtitle {
+    font-size: 0.95rem;
+    color: #0E3A53;
+    margin-bottom: 30px;
+}
+
+/* Form groups */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #071E2E;
+    margin-bottom: 8px;
+}
+
+.form-group input[type="email"],
+.form-group input[type="password"],
+.form-group input[type="text"],
+.form-group select {
+    padding: 12px 14px;
+    border: 2px solid #0E3A53;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    font-family: inherit;
+    background-color: #ffffff;
+    color: #071E2E;
+}
+
+.form-group input[type="email"]:focus,
+.form-group input[type="password"]:focus,
+.form-group input[type="text"]:focus,
+.form-group select:focus {
     outline: none;
-    border-color: #1e3a8a;
+    border-color: #F25C2A;
+    box-shadow: 0 0 0 3px rgba(242, 92, 42, 0.1);
 }
 
-.final-cta button {
-    font-size: 15px;
-    padding: 8px 30px;
-    background-color:#1e3a8a;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    font-weight: bold;
+.form-group input::placeholder {
+    color: #999;
 }
 
-.final-cta button:hover {
+.form-group select {
     cursor: pointer;
 }
 
-footer {
-    margin: 0 auto;
-    padding: 5px 20px;
+/* Remember and Forgot section */
+.remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    font-size: 0.9rem;
+}
+
+.remember {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: #0E3A53;
+}
+
+.remember input[type="checkbox"] {
+    margin-right: 8px;
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+    accent-color: #F25C2A;
+}
+
+.forgot-link {
+    color: #F25C2A;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.forgot-link:hover {
+    color: #071E2E;
+}
+
+/* Submit button */
+.login-btn {
+    width: 100%;
+    padding: 12px 16px;
+    background: #F25C2A;
     color: white;
-    background: black;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+    margin-bottom: 20px;
+}
+
+.login-btn:hover {
+    background: #d64c1d;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(242, 92, 42, 0.3);
+}
+
+.login-btn:active {
+    transform: translateY(0);
+}
+
+/* Sign up link */
+.signup-text {
     text-align: center;
+    color: #0E3A53;
+    font-size: 0.9rem;
+}
+
+.signup-link {
+    color: #F25C2A;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.signup-link:hover {
+    color: #071E2E;
+}
+
+/* Terms section */
+.terms {
+    margin-bottom: 24px;
+    font-size: 0.9rem;
+}
+
+.terms label {
+    display: flex;
+    align-items: center;
+    color: #0E3A53;
+    cursor: pointer;
+}
+
+.terms input[type="checkbox"] {
+    margin-right: 8px;
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+    accent-color: #F25C2A;
+}
+
+.terms-link {
+    color: #F25C2A;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.terms-link:hover {
+    text-decoration: underline;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .login-container {
+        flex-direction: column;
+    }
+
+    .image-section {
+        padding: 30px 20px;
+        min-height: 30vh;
+    }
+
+    .image-section h1 {
+        font-size: 2rem;
+    }
+
+    .form-section {
+        padding: 30px 20px;
+        min-height: 70vh;
+    }
+
+    .form-wrapper h2 {
+        font-size: 1.5rem;
+    }
 }
